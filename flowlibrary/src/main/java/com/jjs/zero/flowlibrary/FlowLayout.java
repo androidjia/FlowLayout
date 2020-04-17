@@ -1,4 +1,4 @@
-package com.jjs.zero.flowlayout;
+package com.jjs.zero.flowlibrary;
 
 import android.content.Context;
 import android.content.res.TypedArray;

@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.jjs.zero.flowlibrary.FlowLayout;
+
 import java.util.ArrayList;
 import java.util.List;
 
