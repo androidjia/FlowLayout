@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.jjs.zero.ecgchart.EcgChart;
 import com.jjs.zero.flowlibrary.FlowLayout;
 
 import java.util.ArrayList;
@@ -44,7 +44,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        List<Float> daa = new ArrayList<>();
+        for (int i = 0; i < 200; i++) {
+            double random;
+            if (i%2 == 0) {
+                random = Math.random();
+            } else {
+                random = -Math.random();
+            }
 
+            float value = (float) (100 * random);
+            daa.add(value);
+        }
+
+        EcgChart c = findViewById(R.id.ecg_chart);
+        c.setData(daa);
     }
 
 }

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+<!--        <import type="com.jjs.zero.ecgchart.R"/>-->
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:background="@android:color/holo_red_dark"
+        >
+        <include
+            android:id="@+id/state1"
+            layout="@layout/include_motion_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/state2"
+            bind:text='@{"站立"}'
+            bind:img="@{@drawable/ic_query}"
+            />
+
+        <include
+            android:id="@+id/state2"
+            layout="@layout/include_motion_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/state1"
+            app:layout_constraintTop_toTopOf="@id/state1"
+            app:layout_constraintEnd_toStartOf="@id/state3"
+            bind:text='@{"走路"}'
+            bind:img="@{@drawable/ic_query}"
+            />
+        <include
+            android:id="@+id/state3"
+            layout="@layout/include_motion_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/state2"
+            app:layout_constraintTop_toTopOf="@id/state1"
+            app:layout_constraintEnd_toStartOf="@id/state4"
+            bind:text='@{"跑步"}'
+            bind:img="@{@drawable/ic_query}"
+            />
+        <include
+            android:id="@+id/state4"
+            layout="@layout/include_motion_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/state3"
+            app:layout_constraintTop_toTopOf="@id/state1"
+            app:layout_constraintEnd_toStartOf="@id/state5"
+            bind:text='@{"躺下"}'
+            bind:img="@{@drawable/ic_query}"
+            />
+        <include
+            android:id="@+id/state5"
+            layout="@layout/include_motion_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/state4"
+            app:layout_constraintTop_toTopOf="@id/state1"
+            app:layout_constraintEnd_toEndOf="parent"
+            bind:text='@{"跌倒"}'
+            bind:img="@{@drawable/ic_query}"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
