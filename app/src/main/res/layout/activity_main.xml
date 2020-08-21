@@ -4,16 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     tools:context=".MainActivity">
 
     <com.jjs.zero.ecgchart.EcgChart
         android:id="@+id/ecg_chart"
         android:layout_width="0dp"
         android:layout_height="300dp"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
+    <com.jjs.zero.ecgchart.SpoLineChart
+        android:id="@+id/ecg_chartTwo"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
 
     <com.jjs.zero.flowlibrary.FlowLayout
         android:id="@+id/flow_layout"
@@ -28,5 +40,99 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         />
+    <com.jjs.zero.chartlibrary.chart.NormalRangeChart
+        android:id="@+id/normalRangeChart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="24dp"
+        android:visibility="gone"
+        app:chartLineColor="#533AFF"
+        app:maxValue="6.1"
+        app:minValue="3.9"
+        app:normalBg="@drawable/shape_blood"
+        app:normalString="空腹血糖正常范围"
+        app:normalStringColor="#B17CE4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
+
+    <com.jjs.zero.chartlibrary.chart.ManyRangeChart
+        android:id="@+id/manyRangeChart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:chartLineColor="#31942D"
+        android:layout_marginRight="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <com.jjs.zero.chartlibrary.chart.ManyRangeManyValueChart
+        android:id="@+id/normalRangeManyValueChart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_marginRight="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+    <com.jjs.zero.chartlibrary.chart.ManyValueChart
+        android:id="@+id/manyValueChart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_marginRight="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.jjs.zero.chartlibrary.chart.HRVChart
+        android:id="@+id/hrv_chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.jjs.zero.chartlibrary.chart.ManyValueBpmChart
+        android:id="@+id/manyValueBpmChart"
+        android:layout_width="200dp"
+        android:layout_height="141dp"
+        android:visibility="visible"
+        android:layout_marginRight="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.jjs.zero.chartlibrary.chart.ScatterDiagramChart
+        android:id="@+id/scatter_diagram_chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.jjs.zero.chartlibrary.chart.EcgReView
+        android:id="@+id/ecg_review"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
