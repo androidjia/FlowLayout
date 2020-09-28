@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#00C0C5</color>
+
+    <color name="color_unable">#E3E3E3</color>
+    <color name="colorEcgReportNormal">#00C0C5</color>
+    <color name="colorEcgReportAbnormal">#F59C7A</color>
+
+    <color name="text_black">#444444</color>
+
+    <color name="color_bg_gray">#F9F9F9</color>
+
+    <color name="text_color_999">#999999</color>
+    <color name="text_color_888">#888888</color>
+    <color name="text_color_666">#666666</color>
+    <color name="color_trans">#00FFFFFF</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_light_blue">#07CEDD</color>
+    <color name="color_origin">#F66349</color>
+    <color name="data_item_light_green">#E4FFFF</color>
+    <color name="color_reporting">#2DBC90</color>
+    <color name="color_reporting_light">#EAFFE6</color>
+    <color name="color_look_reported">#9460E3</color>
+    <color name="color_look_reported_light">#F2ECFC</color>
+    <color name="color_blue">#6085FF</color>
+    <color name="color_record_list_bg">#FFF1D7</color>
+    <color name="color_record_list_bg2">#D6EFFF</color>
+
+    <color name="online_consult_title">#D8F6F2</color>
+    <color name="local_consult_title">#DBEBFF</color>
+
+    <color name="color_activiation_code_scan_gray">#B2ECEE</color>
+    <color name="dash_line_grey">#EFEFEF</color>
+
+    <!--搜索-->
+    <color name="colorDefault">#ffffff</color>
+    <color name="colorBackground">#f1f0f6</color>
+    <color name="colorText">#9b9b9b</color>
+
+
+    <color name="rhythm_purple">#350087</color>
+
+</resources>

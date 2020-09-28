@@ -60,11 +60,18 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    //引入aar
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
+//    implementation(name: 'CordovaLib', ext: 'aar')
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'com.github.PhilJay:MPAndroidChart:v3.0.1'
@@ -72,6 +79,7 @@ dependencies {
     implementation project(path: ':ecgchart')
     implementation project(path: ':chartlibrary')
     implementation project(path: ':httplibrary')
+    implementation project(path: ':baseViewlibrary')
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'

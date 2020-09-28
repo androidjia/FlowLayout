@@ -1,3 +1,4 @@
+include ':baseViewlibrary'
 include ':httplibrary'
 include ':utillibrary'
 rootProject.name='FlowLayout'
