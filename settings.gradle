@@ -1,3 +1,4 @@
+include ':httplibrary'
 include ':utillibrary'
 rootProject.name='FlowLayout'
 include ':app'

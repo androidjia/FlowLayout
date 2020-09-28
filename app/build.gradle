@@ -3,16 +3,30 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
 
-
+    signingConfigs {
+        release {
+            keyAlias 'garea gt1000'
+            keyPassword 'Gareasz*'
+            storeFile file('../AndroidKeystore')
+            storePassword 'Gareasz*'
+        }
+    }
     defaultConfig {
         applicationId "com.jjs.zero.flowlayout"
         minSdkVersion 23
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-
+        //默认路径配置
+//        buildConfigField 'String' 'URL' '\"\"'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+
     }
+//    Gradle Plugin4.0.0 开始 dataBinding 使用buildFeatures
+//    buildFeatures {
+//        dataBinding = true
+//    }
     dataBinding {
         enabled = true
     }
@@ -20,9 +34,29 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//            buildConfigField 'String' 'URL' '\"https://github.com/skymxc\"'
+            manifestPlaceholders = [BASE_URL: "https://github.com/skymxc/"]
+            signingConfig signingConfigs.release
+            matchingFallbacks = ['release']
+        }
+
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            manifestPlaceholders = [BASE_URL: "http://172.16.11.224:8080"]
+            matchingFallbacks = ['release']
+        }
+        innerTest.initWith(buildTypes.release)
+        innerTest {
+            manifestPlaceholders = [BASE_URL: "https://zhihu.com/"]
+            matchingFallbacks = ['release']
         }
     }
+    //Java 编译选项配置
     compileOptions {
+        // Java 源代码的编码
+        encoding = 'utf-8'
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
@@ -37,6 +71,7 @@ dependencies {
     implementation project(path: ':flowlibrary')
     implementation project(path: ':ecgchart')
     implementation project(path: ':chartlibrary')
+    implementation project(path: ':httplibrary')
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
