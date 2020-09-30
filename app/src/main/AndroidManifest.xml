@@ -23,7 +23,7 @@
         android:supportsRtl="true"
         android:theme="@style/noTitleBarTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ActivityBaseTestActivity"></activity>
+        <activity android:name=".HttpTestActivity"></activity>
         <activity android:name=".MainActivity" />
 
         <meta-data
@@ -32,7 +32,7 @@
 
         <activity android:name=".Main2Activity" />
         <activity
-            android:name=".HttpTestActivity"
+            android:name=".ActivityBaseTestActivity"
             android:screenOrientation="fullSensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
