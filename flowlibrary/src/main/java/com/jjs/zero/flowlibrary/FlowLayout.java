@@ -174,8 +174,39 @@ public class FlowLayout extends ViewGroup {
     }
 
 
+    public int getHorizontalSpace() {
+        return mHorizontalSpace;
+    }
 
-    public void addView(List<String> data,OnChildView onChildView) {
+    public void setHorizontalSpace(int mHorizontalSpace) {
+        this.mHorizontalSpace = mHorizontalSpace;
+    }
+
+    public int getVerticalSpace() {
+        return mVerticalSpace;
+    }
+
+    public void setVerticalSpace(int mVerticalSpace) {
+        this.mVerticalSpace = mVerticalSpace;
+    }
+
+    public boolean isHorizontally() {
+        return horizontally;
+    }
+
+    public void setHorizontally(boolean horizontally) {
+        this.horizontally = horizontally;
+    }
+
+    public int getMaxLint() {
+        return maxLint;
+    }
+
+    public void setMaxLint(int maxLint) {
+        this.maxLint = maxLint;
+    }
+
+    public void addView(List<String> data, OnChildView onChildView) {
         if (data != null && data.size()>0 && onChildView != null) {
             for (int i=0;i<data.size();i++) {
                 TextView view =  onChildView.getChildView(i);
@@ -185,9 +216,7 @@ public class FlowLayout extends ViewGroup {
         }
     }
 
-//    public TextView setChildView() {
-//        return new TextView(mContext);
-//    }
+
     public interface OnChildView{
         TextView getChildView(int i);
     }

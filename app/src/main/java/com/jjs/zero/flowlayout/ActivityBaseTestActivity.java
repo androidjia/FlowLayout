@@ -9,6 +9,8 @@ import java.util.LinkedHashMap;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableSource;
+import io.reactivex.Observer;
+import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 
@@ -23,6 +25,34 @@ public class ActivityBaseTestActivity extends BaseActivity<ActivityBaseTestBindi
     protected void initData() {
 
         SparseArray<String> sparseArray = new SparseArray<>();
+        String string = "sdf";
+        String string2 = "sdf";
+
+        string.equals(string2);
+
+
+        Observable.just("123").subscribe(new Observer<String>() {
+            @Override
+            public void onSubscribe(Disposable d) {
+
+            }
+
+            @Override
+            public void onNext(String string) {
+
+            }
+
+            @Override
+            public void onError(Throwable e) {
+
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
+
 
 //        Observable.just("sdfsdf").flatMap(new Function<String, ObservableSource<?>>() {
 //            @Override
