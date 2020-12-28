@@ -2,16 +2,38 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jjs.zero.flowlayout">
 
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
-            android:screenOrientation="fullSensor"
-            >
+        android:theme="@style/noTitleBarTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".HttpTestActivity"></activity>
+        <activity android:name=".MainActivity" />
+
+        <meta-data
+            android:name="BASE_URL"
+            android:value="${BASE_URL}" />
+
+        <activity android:name=".Main2Activity" />
+        <activity
+            android:name=".ActivityBaseTestActivity"
+            android:screenOrientation="fullSensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

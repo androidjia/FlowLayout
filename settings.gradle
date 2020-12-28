@@ -1,4 +1,8 @@
+include ':baseViewlibrary'
+include ':httplibrary'
+include ':utillibrary'
 rootProject.name='FlowLayout'
 include ':app'
 include ':flowlibrary'
 include ':ecgchart'
+include ':chartlibrary'

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="NormalRangeChart">
+        <attr name="maxValue" format="float"/>
+        <attr name="minValue" format="float"/>
+        <attr name="normalString" format="string"/>
+        <attr name="normalStringColor" format="color"/>
+        <attr name="normalBg" format="reference"/>
+    </declare-styleable>
+
+    <attr name="chartLineColor" format="color"/>
+
+    <declare-styleable name="CustomerRadioGroup">
+        <attr name="customer_string_array" format="reference"/>
+        <attr name="customer_string_width" format="dimension"/>
+    </declare-styleable>
+</resources>
