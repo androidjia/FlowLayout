@@ -19,7 +19,7 @@ public class ConfigUrl {
         if (context == null) return;
         ApplicationInfo applicationInfo = null;
         try {
-            applicationInfo = context.getPackageManager().getApplicationInfo(context.getOpPackageName(), PackageManager.GET_META_DATA);
+            applicationInfo = context.getPackageManager().getApplicationInfo(context.getPackageName(), PackageManager.GET_META_DATA);
             url = applicationInfo.metaData.getString("BASE_URL","");
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
